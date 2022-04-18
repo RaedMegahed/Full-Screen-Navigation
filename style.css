@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: sans-serif;
+}
+.toggle {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  background-color: #eee;
+  margin: 10px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 8px;
+  position: fixed;
+}
+.toggle span {
+  width: 100%;
+  background-color: #777;
+  height: 4px;
+}
+.toggle:hover span {
+  background-color: #333;
+}
+nav {
+  background-color: #333;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transform: translateY(-100%);
+  transition: 0.3s;
+}
+nav.swap {
+  transform: translateY(0);
+}
+nav span {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  border: 2px solid white;
+  color: white;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+nav span:hover {
+  color: indianred;
+  border-color: indianred;
+}
+nav a {
+  color: white;
+  font-size: 35px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 80px;
+  transition: 0.3s;
+}
+nav a:hover {
+  background-color: rgb(0 0 0 / 50%);
+}
